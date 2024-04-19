@@ -5,7 +5,7 @@ from openai import OpenAI
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 # Naslov i podnaslov aplikacije
-st.title("📧 Pisac najboljih newsletter-a na Balkanu")
+st.title("📧 Pisac najboljih newsletter-a")
 st.caption(
     "Vaš lični asistent za pisanje newsletter-a 📧🚀 made by [@nikolanewsletter](https://www.instagram.com/nikola.newsletter/)"
 )

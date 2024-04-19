@@ -7,7 +7,7 @@ client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 # Ovde menjate naslov i podnaslov Chatbot aplikacije
 st.title("📧 Pisac najboljih newsletter naslova")
 st.caption(
-    "Vaš lični asistent za pisanje newsletter naslova 📧🚀 made by @nikolanewsletter"
+    "Vaš lični asistent za pisanje newsletter naslova 📧🚀 made by [@nikolanewsletter](https://www.instagram.com/nikola.newsletter/)"
 )
 # Postavljanje inicijalne poruke u session_state
 if "messages" not in st.session_state:

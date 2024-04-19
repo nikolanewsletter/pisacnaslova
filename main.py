@@ -2,7 +2,7 @@ import streamlit as st
 from openai import OpenAI
 
 # Postavljanje API ključa
-client = OpenAI(api_key=st.secrets("OPENAI_API_KEY"))
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 # Ovde menjate naslov i podnaslov Chatbot aplikacije
 st.title("📧 Pisac najboljih newsletter naslova")

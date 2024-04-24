@@ -19,7 +19,7 @@ if not st.session_state.inputs_set:
   tema = st.text_input("Unesite naslov newslettera")
   ciljna_grupa = st.text_input("Unesite ciljnu grupu (kome se obraćate)")
   bolne_tacke = st.text_input(
-      "Unesite bolne tačke klijenata (navedite 3-4 najčešća problema sa kojima se suočavaju)"
+      "Unesite bolne tačke klijenata (navedite problem sa kojim se suočavaju)"
   )
   cta = st.text_input("Unesite poziv na akciju (na šta ih pozivate)")
   if st.button("GENERIŠI NEWSLETTER"):
@@ -44,7 +44,7 @@ if not st.session_state.inputs_set:
         Na kraju newslettera je potrebno da pozoveš na akciju. CTA: {st.session_state.cta}.
         '''
       with st.spinner(
-          "🤔 Kreiram newsletter za tebe! ❤️ Evo pozdravlja te moj tvorac @nikola.newsletter 👋"
+          "🤔 Kreiram newsletter za tebe! ❤️ Pozdravlja te moj tvorac @nikola.newsletter 👋"
       ):
         response = client.chat.completions.create(model="gpt-3.5-turbo-0125",
                                                   messages=[{
@@ -56,7 +56,7 @@ if not st.session_state.inputs_set:
                                                   }])
         msg = response.choices[0].message.content
         st.session_state.last_response = msg
-        st.success("Newsletter je generisan!")
+        st.success("Newsletter je spreman!")
 
         # Prikaz rezultata
         st.write(msg)
